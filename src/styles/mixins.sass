@@ -1,0 +1,14 @@
+@use 'variables'
+
+@mixin btn-style($width: null)
+    width: $width
+    padding: 1rem
+    transition: 0.3s
+    color: variables.$text-color
+    background-color: variables.$color-primary
+    text-align: center
+
+    &:hover
+        background-color: variables.$color-primary
+        filter: brightness(0.9)
+    
