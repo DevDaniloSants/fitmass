@@ -1,0 +1,74 @@
+@use '../variables'
+
+header
+    flex: 0 1 90px
+    background-color: green
+    color: variables.$text-color
+
+
+    .informations
+        background-color: variables.$bg-menu-secundary
+        height: 40px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 0 1rem
+
+        div
+            display: flex
+            flex-wrap: wrap
+
+            span
+                font-size: 12px
+
+                svg
+                    color: variables.$color-primary
+                    margin: 0 5px
+        .search
+            position: relative
+            svg
+                position: absolute
+                top: 5px
+                left: 2px
+              
+            input
+                width: 150px
+                padding: 0.3rem 1.5rem
+                &::placeholder
+                   color: variables.$text-color
+
+            @media (max-width: 450px)
+                
+            
+        
+    .navigation
+        background-color: variables.$color-primary
+        height: 50px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 0 1rem
+
+        .titleAndManuMobile
+            display: flex
+            align-items: center
+            gap: 0.5rem
+            
+            button
+                display: none
+                padding: 0.5rem
+
+                svg
+                    width: 30px
+                    height: 20px
+                    color: variables.$text-color
+
+                @media (max-width: 650px)
+                    display: block
+                    
+            
+
+    .socials
+        display: flex
+        gap: 0.5rem
+        width: 64px
