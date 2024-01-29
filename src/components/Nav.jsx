@@ -1,22 +1,24 @@
 // styles
 import '../styles/components/nav.sass';
 
+import PropTypes from 'prop-types';
+
 const Nav = ({ open, toggleMenu }) => {
   console.log(open + ' valor');
   return (
     <nav className={open ? 'nav open' : 'nav'}>
       <ul>
         <li>
-          <a href="#home">Home</a>
+          <a href="#">Home</a>
         </li>
         <li>
-          <a href="#programas">Programas</a>
+          <a href="#">Programas</a>
         </li>
         <li>
-          <a href="#professores">Professores</a>
+          <a href="#">Professores</a>
         </li>
         <li>
-          <a href="#contato">Contato</a>
+          <a href="#">Contato</a>
         </li>
       </ul>
       {open && (
@@ -26,6 +28,11 @@ const Nav = ({ open, toggleMenu }) => {
       )}
     </nav>
   );
+};
+
+Nav.propTypes = {
+  open: PropTypes.bool.isRequired,
+  toggleMenu: PropTypes.func.isRequired,
 };
 
 export default Nav;

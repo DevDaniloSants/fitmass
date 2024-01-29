@@ -2,6 +2,7 @@
 import '../styles/components/header.sass';
 
 // hooks
+import { useMenu } from '../hooks/useMenu';
 
 // icons
 import { IoLocationSharp } from 'react-icons/io5';
@@ -14,7 +15,6 @@ import { FaBars } from 'react-icons/fa6';
 
 // components
 import Nav from './Nav';
-import { useMenu } from '../hooks/useMenu';
 
 const Header = () => {
   const { open, toggleMenu } = useMenu();
