@@ -26,8 +26,8 @@ const Project = () => {
             end: 'bottom 900px',
           },
         })
-        .fromTo('#card1', { opacity: 0, x: -80 }, { opacity: 1, x: 0 })
-        .fromTo('#card2', { opacity: 0, x: 80 }, { opacity: 1, x: 0 }, '-=0.5');
+        .fromTo('#card1', { opacity: 0, y: -100 }, { opacity: 1, y: 0 })
+        .fromTo('#card2', { opacity: 0, y: 100 }, { opacity: 1, y: 0 }, '-=0.5');
     }, elements);
   }, []);
 
