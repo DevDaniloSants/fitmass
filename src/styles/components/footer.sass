@@ -1,0 +1,41 @@
+@use '../variables'
+    
+footer
+    background: variables.$bg-menu-secundary
+    border-top: 1px solid variables.$border-footer
+    color: variables.$text-color
+
+    .top_footer
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+        gap: 1rem
+        text-align: center
+        width: 50%
+        margin: 1em auto
+
+        span
+            font-size: 2em
+
+        .links
+            display: flex
+            gap: 1rem
+            text-align: center
+
+            ul
+                li,a
+                    transition: color 0.5s
+                    padding-bottom: 10px
+
+                    &:hover
+                        color: variables.$color-primary
+
+    .end_footer 
+        padding: 1rem
+        text-align: center
+        background: variables.$color-primary
+
+    @media(max-width: 580px)
+        .top_footer
+            width: 100%
+      
