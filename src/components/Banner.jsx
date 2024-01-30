@@ -20,53 +20,15 @@ const Banner = () => {
     const description = descriptionRef.current;
     const btn = btnRef.current;
 
-    tl.fromTo(
-      welcomeTitle,
-      {
-        opacity: 0,
-        y: 300,
-      },
-      {
-        opacity: 1,
-        y: 0,
-      },
-    )
-      .fromTo(
-        title,
-        {
-          opacity: 0,
-          y: -100,
-        },
-        {
-          opacity: 1,
-          y: 0,
-        },
-        '-=0.5',
-      )
+    tl.fromTo(welcomeTitle, { opacity: 0, y: 300 }, { opacity: 1, y: 0 })
+      .fromTo(title, { opacity: 0, y: -100 }, { opacity: 1, y: 0 }, '-=0.5')
       .fromTo(
         description,
-        {
-          opacity: 0,
-          x: -700,
-        },
-        {
-          opacity: 1,
-          x: 0,
-        },
-        '-=0.5'
+        { opacity: 0, x: -700 },
+        { opacity: 1, x: 0 },
+        '-=0.5',
       )
-      .fromTo(
-        btn,
-        {
-          opacity: 0,
-          x: 200,
-        },
-        {
-          opacity: 1,
-          x: 0,
-        },
-        '-=0.5'
-      );
+      .fromTo(btn, { opacity: 0, x: 200 }, { opacity: 1, x: 0 }, '-=0.5');
   }, []);
 
   return (
