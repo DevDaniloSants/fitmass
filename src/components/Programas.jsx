@@ -50,54 +50,14 @@ const Programas = () => {
           scrollTrigger: {
             trigger: '.inner',
             scrub: true,
-            start: 'top 600px',
-            end: 'bottom 850px',
+            start: 'top 730px',
+            end: 'bottom 825px',
           },
         })
-        .fromTo(
-          '#image1',
-          {
-            opacity: 0,
-            y: 160,
-          },
-          {
-            opacity: 1,
-            y: 0,
-          },
-        )
-        .fromTo(
-          '#image2',
-          {
-            opacity: 0,
-            y: 160,
-          },
-          {
-            opacity: 1,
-            y: 0,
-          },
-        )
-        .fromTo(
-          '#image3',
-          {
-            opacity: 0,
-            y: -160,
-          },
-          {
-            opacity: 1,
-            y: 0,
-          },
-        )
-        .fromTo(
-          '#image4',
-          {
-            opacity: 0,
-            y: -160,
-          },
-          {
-            opacity: 1,
-            y: 0,
-          },
-        );
+        .fromTo('#image1', { opacity: 0, y: 160 }, { opacity: 1, y: 0 })
+        .fromTo('#image2', { opacity: 0, y: 160 }, { opacity: 1, y: 0 })
+        .fromTo('#image3', { opacity: 0, y: -160 }, { opacity: 1, y: 0 })
+        .fromTo('#image4', { opacity: 0, y: -160 }, { opacity: 1, y: 0 });
     }, elements);
 
     return () => {
@@ -108,7 +68,7 @@ const Programas = () => {
   return (
     <div className="programs" ref={elements}>
       <div className="title">
-        <h1>Outros Programas</h1>
+        <h1>Programas e treinos</h1>
       </div>
       <div className="carousel_container">
         <motion.div
