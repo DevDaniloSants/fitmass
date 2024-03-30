@@ -2,11 +2,9 @@
 import '../styles/components/banner.sass';
 
 import { gsap } from 'gsap';
+import {useLayoutEffect, useRef} from 'react';
 
-// hooks
-import { useLayoutEffect, useRef } from 'react';
-
-const Banner = () => {
+const Banner = ({ banner }) => {
   const welcomeRef = useRef();
   const titleRef = useRef();
   const descriptionRef = useRef();
@@ -32,7 +30,11 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="banner" id="home">
+    <div
+      className="banner"
+      id="home"
+      style={{ backgroundImage: `url(${banner})` }}
+    >
       <div>
         <span className="welcome" ref={welcomeRef}>
           welcome to
