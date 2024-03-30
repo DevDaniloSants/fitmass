@@ -61,7 +61,7 @@ header
                 svg
                     width: 30px
                     height: 20px
-                    color: variables.$text-color
+                    color: variables.$text-color                   
 
                 @media (max-width: 650px)
                     display: block
@@ -70,5 +70,11 @@ header
 
     .socials
         display: flex
-        gap: 0.5rem
-        width: 64px
+        gap: 1rem
+        width: 100px
+
+        a
+            transition: all 0.4s
+
+            &:hover
+              transform: translateY(-5px)
